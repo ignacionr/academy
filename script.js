@@ -40,13 +40,15 @@ fetch(backend)
             title_cell.colSpan = 2;
             title_cell.innerHTML = `<h3>${courseInfo.title}</h3><p>${courseInfo.description}</p>`;
             course_row.appendChild(title_cell);
+            target_table.appendChild(course_row);
             // create the cell for the course kata
+            const kata_row = document.createElement("tr");
             const kata_cell = document.createElement("td");
             kata_cell.colSpan = 2;
             kata_cell.textContent = courseInfo.kata;
-            course_row.appendChild(kata_cell);
+            kata_row.appendChild(kata_cell);
             // add the course row to the table
-            target_table.appendChild(course_row);
+            target_table.appendChild(kata_row);
             // go through each of the events of the course
             for (const event of events) {
                 // create the row for the event
