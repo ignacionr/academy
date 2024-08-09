@@ -15,6 +15,14 @@ function convertUTCToLocalTime(utcTimeString) {
 }
 
 const backend = "https://script.google.com/macros/s/AKfycbzK8tsPCVw_tSGSGaLKTwk6vLc1rma3ANAfqWt8TeqvO3g-9tnnAU1v9sYXEkQ4Ja-51g/exec?lang=" + base_locale;
+const messages = {
+    "es": {
+        signup_button: "¡Inscríbete por un dólar!"
+    },
+    "en": {
+        signup_button: "Sign up for a dollar!"
+    }
+};
 
 fetch(backend)
     .then(response => response.json())
@@ -52,7 +60,7 @@ fetch(backend)
                 const register_link = document.createElement("a");  
                 register_link.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=inz@fastmicroservices.com&amount=1.00&currency_code=USD&item_name=Lesson+Registration+Fee&custom=" + event.id;
                 register_link.classList.add("button");
-                register_link.textContent = "¡Inscríbete por un dólar!";
+                register_link.textContent = messages[base_locale].signup_button;
                 register_cell.appendChild(register_link);
                 event_row.appendChild(register_cell);
                 target_table.appendChild(event_row);
