@@ -37,9 +37,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </svg></a></p>
     </div>
 
-    <h2>Virtual Classes This Week</h2>
+    <h2>Classes this week</h2>
     <table id="all-classes">
     </table>
+
+    <h2>Vote for a time and topic</h2>
+    <div class="suggestion">
+        <form id="suggestion-form">
+            <table>
+                <tr>
+                    <td colspan="2">        <p>Suggest a time that works for you, and the contents you would like to work on.</p>
+                        <p>Naturally, there is no guarantee that we will be able to accommodate your request, but we will do our best to do so.</p></td>
+                </tr>
+                <tr>
+                    <td><label for="suggestion-time">Date and Time:</label></td>
+                    <td><input type="datetime-local" id="suggestion-time" required></td>
+                </tr>
+                <tr>
+                    <td><label for="suggestion-contents">Lesson Contents:</label></td>
+                    <td><input type="text" id="suggestion-contents" required></td>
+                </tr>
+                <tr>
+                    <td><label for="suggestion-email">Your email:</label></td>
+                    <td><input type="email" id="suggestion-email" required></td>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Send</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
     <h2>In English or Spanish</h2>
     <p>You are viewing the class schedules in English. We also offer them <a href="spanish.html">in Spanish</a>.</p>
@@ -53,6 +80,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
         const base_locale = 'en';
     </script>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

@@ -69,3 +69,26 @@ fetch(backend)
             }
         }
     });
+
+const suggestion_form = document.getElementById("suggestion-form");
+suggestion_form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const contents = document.getElementById("suggestion-contents").value;
+    const email = document.getElementById("suggestion-email").value;
+    const suggested_datetime = document.getElementById("suggestion-time").value;
+    const user_timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const payload = {
+        contents: contents,
+        email: email,
+        suggested_datetime: suggested_datetime,
+        user_timezone: user_timezone
+    };
+    fetch(backend + "&op=suggestion", {
+        method: "POST",
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+        suggestion_form.parentElement.innerText = data.message;
+    });
+});

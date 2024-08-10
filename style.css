@@ -98,3 +98,11 @@ h2 {
     margin-top: 11px;
     margin-bottom: 5px;
 }
+
+div.suggestion {
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+}
