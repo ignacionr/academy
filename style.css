@@ -51,6 +51,10 @@ div.offer {
     margin-bottom: 20px;
 }
 
+div.offer p {
+    margin-left: 15pt;
+}
+
 div.content {
     margin: 20px;
 }
