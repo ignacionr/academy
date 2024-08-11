@@ -49,6 +49,7 @@ div.offer {
     background-color: #e0e0e0;
     padding: 20px;
     margin-bottom: 20px;
+    line-height: 17pt;
 }
 
 div.offer img {
@@ -73,6 +74,7 @@ th, td {
     padding: 10px;
     text-align: left;
     border: 0px solid #ddd;
+    line-height: 17pt;
 }
 
 th {
@@ -103,14 +105,20 @@ button:hover {
 }
 
 h2 {
-    margin-top: 40pt;
+    margin-top: 36pt;
     margin-bottom: 8pt;
 }
-
+h3{
+    margin-top: 12pt;
+    margin-bottom: 10pt;
+}
 div.suggestion {
     margin-top: 10px;
 }
 
+p {
+    line-height: 17pt;  
+}
 input {
     width: 100%;
 }
