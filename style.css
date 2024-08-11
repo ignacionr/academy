@@ -151,3 +151,38 @@ canvas.emscripten { border: 0px none; background-color: black; }
   font-family: 'Lucida Console', Monaco, monospace;
   outline: none;
 }
+
+@media screen and (min-width: 768px) {    
+    div.content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: top;
+        place-items: top;
+        padding-left: 20px;
+        background-color: #fefefe;
+    }
+
+    div.section {
+        width: 40%;
+        padding: 0;
+        margin: 0;
+    }    
+}
+
+@media screen and (min-width: 1020px) {    
+    div.content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    div.section {
+        width: 30%;
+        padding-right: 20px;
+    }    
+}
