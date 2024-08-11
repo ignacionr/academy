@@ -8679,7 +8679,7 @@ var ASM_CONSTS = {
     };
 
   
-  var _emscripten_set_window_title = (title) => document.title = UTF8ToString(title);
+  var _emscripten_set_window_title = (title) => {};
 
   var _emscripten_sleep = () => {
       throw 'Please compile your program with async support in order to use asynchronous operations like emscripten_sleep';
