@@ -58,20 +58,21 @@ div.content {
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 0;
 }
 
 th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f0f0f0;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
 }
 
 tr:hover {
@@ -94,8 +95,8 @@ button:hover {
 }
 
 h2 {
-    margin-top: 11px;
-    margin-bottom: 5px;
+    margin-top: 30pt;
+    margin-bottom: 8pt;
 }
 
 div.suggestion {
