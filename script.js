@@ -27,7 +27,6 @@ const messages = {
 fetch(backend)
     .then(response => response.json())
     .then(data => {
-        // will look like this: {"A1":{"courseInfo":{"title":"Configuramos C++ en 20 minutos y primer programa","description":"Esta clase no es dif&iacute;cil, pero es muy importante. No necesit&aacute;s una gran computadora, basta que funcione el navegador. Sal&iacute;s compilando tu primer programa en C++.","kata":""},"events":[{"startTime":"2024-08-12T15:00:00-03:00","registered":0,"googleMeetUrl":"https://meet.google.com/tvn-wxgu-rtk"},{"startTime":"2024-08-12T18:00:00-03:00","registered":0,"googleMeetUrl":"https://meet.google.com/mah-gfdt-suv"},{"startTime":"2024-08-13T18:00:00-03:00","registered":0,"googleMeetUrl":"https://meet.google.com/mfw-stcv-ksc"},{"startTime":"2024-08-14T15:00:00-03:00","registered":0,"googleMeetUrl":"https://meet.google.com/kav-spmt-jwn"}]}}
         const target_table = document.getElementById("all-classes");
         // go through each of the properties of the data object
         for (const [key, value] of Object.entries(data)) {
@@ -60,7 +59,7 @@ fetch(backend)
                 // an anchor to register for the event
                 const register_cell = document.createElement("td");
                 const register_link = document.createElement("a");  
-                register_link.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=inz@fastmicroservices.com&amount=1.00&currency_code=USD&item_name=Lesson+Registration+Fee&custom=" + event.id;
+                register_link.href = event.register_href;
                 register_link.classList.add("button");
                 register_link.textContent = messages[base_locale].signup_button;
                 register_cell.appendChild(register_link);
