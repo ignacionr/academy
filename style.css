@@ -23,10 +23,10 @@ div.hero img {
 
 div.hero h1 {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
+    font-size: 42px;
     color: #fff;
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -36,7 +36,7 @@ div.hero h1 {
 
 div.hero p {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
