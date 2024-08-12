@@ -192,6 +192,7 @@ h3 svg {
     gap: 20px;
     padding-bottom: 10px;
 }
+
 .card {
     border-radius: 8px;
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
@@ -227,19 +228,32 @@ h3 svg {
         padding-left: 20px;
         background-color: #fefefe;
     }
-
+    div.gallery-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
     div.section {
         width: 40%;
         padding: 0;
         margin: 0;
     }
     .card {
-        width: 37%;
+        width: 40%;
     }
 }
 
 @media screen and (min-width: 1020px) {    
     div.content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    div.gallery-container {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
