@@ -64,7 +64,8 @@ fetch(backend)
                 const register_link = document.createElement("a");  
                 register_link.href = event.register_href;
                 register_link.classList.add("button");
-                register_link.textContent = messages[base_locale].signup_button;
+                register_link.classList.add(`schedule-${event.schedule}`);
+                register_link.textContent = event.register_text;
                 register_cell.appendChild(register_link);
                 event_row.appendChild(register_cell);
                 target_table.appendChild(event_row);
