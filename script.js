@@ -37,7 +37,7 @@ fetch(backend)
             // create the cell for the course title
             const title_cell = document.createElement("td");
             title_cell.colSpan = 2;
-            title_cell.innerHTML = `<h3>${courseInfo.title}</h3><p>${courseInfo.description}</p>`;
+            title_cell.innerHTML = `<h3>${courseInfo.icon}${courseInfo.title}</h3><p>${courseInfo.description}</p>`;
             course_row.appendChild(title_cell);
             target_table.appendChild(course_row);
             // create the cell for the course kata
