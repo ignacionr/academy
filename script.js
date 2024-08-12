@@ -15,14 +15,6 @@ function convertUTCToLocalTime(utcTimeString) {
 }
 
 const backend = "https://script.google.com/macros/s/AKfycbzK8tsPCVw_tSGSGaLKTwk6vLc1rma3ANAfqWt8TeqvO3g-9tnnAU1v9sYXEkQ4Ja-51g/exec?lang=" + base_locale;
-const messages = {
-    "es": {
-        signup_button: "¡Inscríbete por un dólar!"
-    },
-    "en": {
-        signup_button: "Sign up for a dollar!"
-    }
-};
 
 fetch(backend)
     .then(response => response.json())
@@ -65,7 +57,7 @@ fetch(backend)
                 register_link.href = event.register_href;
                 register_link.classList.add("button");
                 register_link.classList.add(`schedule-${event.schedule}`);
-                register_link.textContent = event.register_text;
+                register_link.innerHTML = event.register_text;
                 register_cell.appendChild(register_link);
                 event_row.appendChild(register_cell);
                 target_table.appendChild(event_row);
