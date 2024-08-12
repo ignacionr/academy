@@ -172,6 +172,18 @@ canvas.emscripten { border: 0px none; background-color: black; }
     }    
 }
 
+h3 svg { 
+    width: 44px;
+    height: 44px;
+    margin-right: 5px;
+    vertical-align: middle;
+    float:left;
+    margin-right: 20px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (min-width: 1020px) {    
     div.content {
         display: flex;
