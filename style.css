@@ -178,6 +178,7 @@ h3 svg {
     flex-shrink: 0;
     scroll-snap-align: center;
     text-align: center;
+    margin: 9px;
 }
 .card h3 {
     margin: 10px 0;
