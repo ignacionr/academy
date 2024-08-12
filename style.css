@@ -152,6 +152,48 @@ canvas.emscripten { border: 0px none; background-color: black; }
   outline: none;
 }
 
+h3 svg { 
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+    vertical-align: middle;
+    float:left;
+    margin-right: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    text-align: center;
+}
+.card h3 {
+    margin: 10px 0;
+}
+.card p {
+    margin: 0 10px 10px;
+}
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+.gallery-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 @media screen and (min-width: 768px) {    
     div.content {
         display: flex;
@@ -169,19 +211,10 @@ canvas.emscripten { border: 0px none; background-color: black; }
         width: 40%;
         padding: 0;
         margin: 0;
-    }    
-}
-
-h3 svg { 
-    width: 48px;
-    height: 48px;
-    margin-right: 5px;
-    vertical-align: middle;
-    float:left;
-    margin-right: 20px;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .card {
+        width: 37%;
+    }
 }
 
 @media screen and (min-width: 1020px) {    
@@ -197,4 +230,7 @@ h3 svg {
         width: 30%;
         padding-right: 20px;
     }    
+    .card {
+        width: 26%;
+    }
 }

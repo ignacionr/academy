@@ -27,9 +27,12 @@ const messages = {
 fetch(backend)
     .then(response => response.json())
     .then(data => {
-        const target_table = document.getElementById("all-classes");
+        const lessons_container = document.getElementById("lessons-container");
         // go through each of the properties of the data object
         for (const [key, value] of Object.entries(data)) {
+            const target_table = document.createElement("table");
+            target_table.classList.add("card");
+            lessons_container.appendChild(target_table);
             const courseInfo = value.courseInfo;
             const events = value.events;
             // create the row for the course
