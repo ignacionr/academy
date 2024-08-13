@@ -203,7 +203,7 @@ h3 svg {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     padding-bottom: 10px;
 }
 
