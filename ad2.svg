@@ -1,0 +1,39 @@
+<svg width="1080" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="url(#backgroundGradient)" />
+  <rect x="0" y="0" width="1080" height="1080" fill="white" />
+  
+  <!-- C++ Symbol -->
+  <text x="540" y="400" font-size="160" font-family="Arial, sans-serif" fill="#007acc" font-weight="bold" text-anchor="middle">C++</text>
+
+  <!-- Book 1 (Messy Approach) -->
+  <g transform="translate(-650,-170)">
+    <rect x="680" y="600" width="350" height="160" fill="#0c0c0c" stroke="#808080" stroke-width="4" />
+    <text x="695" y="640" font-size="20" font-family="Arial, sans-serif" fill="#5f5">int* arr = new int[3]{1, 2, 3};</text>
+    <text x="695" y="670" font-size="20" font-family="Arial, sans-serif" fill="#5f5">int sum = 0;</text>
+    <text x="695" y="700" font-size="20" font-family="Arial, sans-serif" fill="#5f5">for (int i = 0; i &lt; 3; ++i) sum += arr[i];</text>
+    <text x="695" y="730" font-size="20" font-family="Arial, sans-serif" fill="#5f5">delete[] arr;</text>
+  </g>
+
+  <!-- Book 2 (Cleaner Approach) -->
+  <g transform="translate(-455,-50)">
+    <rect x="680" y="600" width="350" height="180" fill="#0c0c0c" stroke="#808080" stroke-width="4" />
+    <text x="695" y="640" font-size="20" font-family="Arial, sans-serif" fill="#5f5">std::array&lt;int, 3&gt; arr = {1, 2, 3};</text>
+    <text x="695" y="670" font-size="20" font-family="Arial, sans-serif" fill="#5f5">int sum = 0;</text>
+    <text x="695" y="700" font-size="20" font-family="Arial, sans-serif" fill="#5f5">for (auto val : arr) sum += val;</text>
+  </g>
+
+  <!-- Book 3 (Beautiful C++20 Approach) -->
+  <g transform="translate(-130,0)">
+    <rect x="680" y="600" width="480" height="220" fill="#000" stroke="#808080" stroke-width="4" />
+    <text x="695" y="640" font-size="32" font-family="Arial, sans-serif" fill="#8f8">std::array arr = {1, 2, 3};</text>
+    <text x="695" y="670" font-size="32" font-family="Arial, sans-serif" fill="#8f8">int sum = std::accumulate(</text>
+    <text x="735" y="700" font-size="32" font-family="Arial, sans-serif" fill="#8f8">arr.begin(), arr.end(), 0);</text>
+  </g>
+
+  <!-- Text Elements -->
+  <text x="540" y="140" font-size="60" font-family="Arial, sans-serif" fill="#333333" font-weight="bold" text-anchor="middle">Step up your C++?</text>
+  <text x="540" y="200" font-size="40" font-family="Arial, sans-serif" fill="#007acc" font-weight="bold" text-anchor="middle">Unlock Your Potential</text>
+  <text x="105" y="920" font-size="85" font-family="Arial, sans-serif" fill="#007acc" font-weight="bold">cppforeveryone.com</text>
+  <text x="540" y="1050" font-size="40" font-family="Arial, sans-serif" fill="#00c853" text-anchor="middle">Turn Challenges into Mastery</text>
+
+</svg>

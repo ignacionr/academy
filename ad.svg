@@ -1,0 +1,75 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1080 1080"
+    width="1080"
+    height="1080"
+    style="background-color:#f0f0f0;">
+  
+  <!-- Background rectangle -->
+  <rect width="1080" height="1080" fill="#f0f0f0" />
+
+  <!-- Central Computer or Code Editor -->
+  <rect x="340" y="440" width="400" height="200" rx="15" ry="15" fill="#005792" />
+  
+  <!-- Screen area -->
+  <rect x="355" y="455" width="370" height="140" rx="10" ry="10" fill="#ffffff" />
+
+  <!-- Code lines -->
+  <text x="420" y="480" font-family="Monaco, monospace" font-size="16" fill="#005792">#include &lt;iostream&gt;</text>
+  <text x="420" y="500" font-family="Monaco, monospace" font-size="16" fill="#005792">int main() {</text>
+  <text x="440" y="520" font-family="Monaco, monospace" font-size="16" fill="#005792">std::cout &lt;&lt; "Hello, World!";</text>
+  <text x="420" y="540" font-family="Monaco, monospace" font-size="16" fill="#005792">return 0;</text>
+  <text x="420" y="560" font-family="Monaco, monospace" font-size="16" fill="#005792">}</text>
+
+  <!-- Icons around the computer -->
+  <!-- AI/Robotics icon -->
+  <circle cx="290" cy="390" r="40" fill="#ffca28" />
+  <text x="260" y="400" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">&#x1F916;</text>
+  
+  <!-- Gaming icon -->
+  <circle cx="790" cy="390" r="40" fill="#8e44ad" />
+  <text x="760" y="400" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">&#x1F3AE;</text>
+
+  <!-- Networking icon -->
+  <circle cx="790" cy="690" r="40" fill="#e67e22" />
+  <text x="760" y="700" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">&#x1F4BB;</text>
+  
+  <!-- IoT icon -->
+  <circle cx="290" cy="690" r="40" fill="#27ae60" />
+  <text x="260" y="700" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">&#x1F4E1;</text>
+
+  <!-- Text: "Build Anything with C++" -->
+  <text x="340" y="900" font-family="Arial, sans-serif" font-size="36" fill="#005792" font-weight="bold">Build Anything with C++</text>
+
+
+  <!-- CTA Container -->
+  <g transform="scale(0.5,0.5)">
+
+    <!-- Outer Circle -->
+    <circle cx="340" cy="100" r="180" fill="#007ACC" stroke="#FFFFFF" stroke-width="10"/>
+
+    <!-- Inner Text -->
+    <text x="340" y="100" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" dominant-baseline="middle">
+      Join C++ Academy
+    </text>
+
+    <!-- Sub Text -->
+    <text x="340" y="180" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="32" text-anchor="middle" dominant-baseline="middle">
+      cppforeveryone.com
+    </text>
+
+    <!-- Button -->
+    <rect x="200" y="220" width="280" height="70" rx="35" fill="#FF4500">
+      <animate attributeName="fill" values="#FF4500; #FF6347; #FF4500" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="340" y="255" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" dominant-baseline="middle">
+      Get Started
+    </text>
+
+    <!-- Animated Arrow -->
+    <polygon points="460,230 460,280 500,255" fill="#FFFFFF">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 10,0; 0,0" dur="1s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+s
+</svg>

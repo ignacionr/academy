@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+
+  <!-- Background Rectangle -->
+  <rect width="1080" height="1080" fill="none"/>
+
+  <!-- CTA Container -->
+  <g transform="translate(200, 400)">
+
+    <!-- Outer Circle -->
+    <circle cx="340" cy="100" r="180" fill="#007ACC" stroke="#FFFFFF" stroke-width="10"/>
+
+    <!-- Inner Text -->
+    <text x="340" y="100" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" dominant-baseline="middle">
+      Join C++ Academy
+    </text>
+
+    <!-- Sub Text -->
+    <text x="340" y="180" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="32" text-anchor="middle" dominant-baseline="middle">
+      cppforeveryone.com
+    </text>
+
+    <!-- Button -->
+    <rect x="200" y="220" width="280" height="70" rx="35" fill="#FF4500">
+      <animate attributeName="fill" values="#FF4500; #FF6347; #FF4500" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="340" y="255" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" dominant-baseline="middle">
+      Get Started
+    </text>
+
+    <!-- Animated Arrow -->
+    <polygon points="460,230 460,280 500,255" fill="#FFFFFF">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 10,0; 0,0" dur="1s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+</svg>
