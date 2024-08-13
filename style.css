@@ -216,6 +216,16 @@ h3 svg {
     scrollbar-width: none;  /* Firefox */
 }
 
+p.code {
+    p.code {
+        font-size: 12px;
+        padding: 2px;
+        background-color: #444;
+        color: #fff;
+        border-radius: 4px;
+    }
+}
+
 @media screen and (min-width: 768px) {    
     div.content {
         display: flex;
