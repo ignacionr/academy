@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 div.hero {
@@ -29,7 +29,7 @@ div.hero h1 {
     font-size: 42px;
     color: #fff;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 16px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 3px;
 }
@@ -70,7 +70,8 @@ table {
     border: 0;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
     border: 0px solid #ddd;
@@ -129,56 +130,69 @@ h2 {
     margin-top: 36pt;
     margin-bottom: 8pt;
 }
-h3{
+
+h3 {
     margin-top: 12pt;
     margin-bottom: 10pt;
 }
+
 div.suggestion {
     margin-top: 10px;
 }
 
 p {
-    line-height: 17pt;  
+    line-height: 17pt;
 }
+
 input {
     width: 100%;
 }
 
-div.emscripten { text-align: center; }
-div.emscripten_border { border: 1px solid black; }
+div.emscripten {
+    text-align: center;
+}
+
+div.emscripten_border {
+    border: 1px solid black;
+}
+
 /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-canvas.emscripten { border: 0px none; background-color: black; }
+canvas.emscripten {
+    border: 0px none;
+    background-color: black;
+}
+
 #canvas {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: black;
 }
 
 #output {
-  width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  margin-top: 10px;
-  border-left: 0px;
-  border-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  display: block;
-  background-color: black;
-  color: white;
-  font-family: 'Lucida Console', Monaco, monospace;
-  outline: none;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Console', Monaco, monospace;
+    outline: none;
 }
 
-h3 svg { 
+h3 svg {
     width: 48px;
     height: 48px;
     margin-right: 5px;
     vertical-align: middle;
-    float:left;
+    float: left;
     margin-right: 20px;
     background-color: white;
     padding: 5px;
@@ -202,31 +216,51 @@ h3 svg {
     text-align: center;
     margin: 9px;
 }
+
 .card h3 {
     margin: 10px 0;
 }
+
 .card p {
     margin: 0 10px 10px;
 }
+
 .gallery-container::-webkit-scrollbar {
     display: none;
 }
+
 .gallery-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 p.code {
-    p.code {
-        font-size: 10px;
-        padding: 2px;
-        background-color: #555;
-        color: #fff;
-        border-radius: 4px;
-    }
+    font-size: 10px;
+    padding: 2px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {    
+div.youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+div.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
     div.content {
         display: flex;
         justify-content: space-between;
@@ -238,6 +272,7 @@ p.code {
         padding-left: 20px;
         background-color: #fefefe;
     }
+
     div.gallery-container {
         display: flex;
         justify-content: space-between;
@@ -245,17 +280,19 @@ p.code {
         flex-wrap: wrap;
         width: 100%;
     }
+
     div.section {
         width: 40%;
         padding: 0;
         margin: 0;
     }
+
     .card {
         width: 40%;
     }
 }
 
-@media screen and (min-width: 1020px) {    
+@media screen and (min-width: 1020px) {
     div.content {
         display: flex;
         justify-content: space-between;
@@ -263,6 +300,7 @@ p.code {
         flex-wrap: wrap;
         width: 100%;
     }
+
     div.gallery-container {
         display: flex;
         justify-content: space-between;
@@ -274,7 +312,8 @@ p.code {
     div.section {
         width: 30%;
         padding-right: 20px;
-    }    
+    }
+
     .card {
         width: 26%;
     }
