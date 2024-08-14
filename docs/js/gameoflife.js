@@ -626,7 +626,7 @@ function createExportWrapper(name, nargs) {
 // include: runtime_exceptions.js
 // end include: runtime_exceptions.js
 function findWasmBinary() {
-    var f = 'gameoflife.wasm';
+    var f = 'assets/gameoflife.wasm';
     if (!isDataURI(f)) {
       return locateFile(f);
     }
