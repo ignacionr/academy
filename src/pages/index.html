@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="..">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=20">
+    {% include "google-tag-head.html" %}
+</head>
+
+<body>
+    {% include "google-tag-body.html" %}
+    <div class="hero">
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+        <h1>{{ title }}</h1>
+        <p>{{ conway_line }}</p>
+    </div>
+
+    <script src="js/prepare.js"></script>
+    <script async type="text/javascript" src="js/gameoflife.js"></script>
+
+    <div class="offer">
+        <img src="https://gravatar.com/userimage/121399/162c55b25fd06f3c7012f4ca15564152.jpeg?size=256"
+            alt="Ignacio Rodriguez" style="width: 70pt; margin-right: 5pt;">
+        <p>{{ offered_by }}<strong>{{ no_pre_recorded }}</strong><br> 
+            {% include "social-links.html" %}</p>
+    </div>
+
+    <div class="content">
+        <div>
+            <h2>{{ upcoming_lessons }}</h2>
+            <div class="gallery-container" id="lessons-container">
+                {% include "card-meet-trainer.html" %} 
+            </div>
+        </div>
+
+        <div class="section">
+            {% include "topic-vote.html" %}
+        </div>
+        <div class="section">
+            <h2>{{ english_or_spanish }}</h2>
+            <p>{{ alternative_language }}</p>
+
+        </div>
+        <div class="section">
+            <h2>{{ practical_classes }}</h2>
+            <p>{{ explain_practical }}</p>
+
+        </div>
+        <div class="section">
+            <h2>{{ use_google_meet }}</h2>
+            <p>{{ explain_google_meet }}</p>
+        </div>
+    </div>
+    <div class="foot-wrapper">
+    </div>
+    <script>
+        const base_locale = '{{ base_locale }}';
+    </script>
+    <script src="js/script.js?v=12"></script>
+</body>
+
+</html>

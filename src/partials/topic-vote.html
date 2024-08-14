@@ -1,0 +1,29 @@
+<h2>{{ vote_topic }}</h2>
+<div class="suggestion">
+    <form id="suggestion-form">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <p>{{ suggest_time }}</p>
+                    <p>{{ time_disclaimer }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="suggestion-time">{{ date_time }}</label></td>
+                <td><input type="datetime-local" id="suggestion-time" required></td>
+            </tr>
+            <tr>
+                <td><label for="suggestion-contents">{{ lesson_contents }}:</label></td>
+                <td><input type="text" id="suggestion-contents" required></td>
+            </tr>
+            <tr>
+                <td><label for="suggestion-email">{{ your_email }}:</label></td>
+                <td><input type="email" id="suggestion-email" required></td>
+            <tr>
+                <td></td>
+                <td><button type="submit">{{ send }}</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
