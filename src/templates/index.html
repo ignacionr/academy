@@ -27,7 +27,7 @@
     <div class="hero">
         <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
         <h1>{{ title }}</h1>
-        <p>{{ conway-line }}</p>
+        <p>{{ conway_line }}</p>
     </div>
 
     <script src="js/prepare.js"></script>
@@ -36,7 +36,7 @@
     <div class="offer">
         <img src="https://gravatar.com/userimage/121399/162c55b25fd06f3c7012f4ca15564152.jpeg?size=256"
             alt="Ignacio Rodriguez" style="width: 70pt; margin-right: 5pt;">
-        <p>{{ offered-by }}<strong>{{ no-pre-recorded }}</strong><br> <a href="https://www.linkedin.com/in/ignacio"><svg viewBox="0 0 24 24"
+        <p>{{ offered_by }}<strong>{{ no_pre_recorded }}</strong><br> <a href="https://www.linkedin.com/in/ignacio"><svg viewBox="0 0 24 24"
                     fill="currentColor" height="34" focusable="false">
                     <path
                         d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
@@ -53,49 +53,49 @@
 
     <div class="content">
         <div>
-            <h2>{{ upcoming-lessons }}</h2>
+            <h2>{{ upcoming_lessons }}</h2>
             <div class="gallery-container" id="lessons-container">
                 <table class="card">
                     <tr><td>
-                    <h3>{{ meet-your-trainer }}</h3>
+                    <h3>{{ meet_your_trainer }}</h3>
                     </td></tr>
                     <tr><td>
                     <div class="youtube">
                         <iframe src="https://www.youtube.com/embed/B5pNvkhr4AE" frameborder="0" allowfullscreen></iframe>
                     </div></td></tr>
                     <tr><td>
-                        <p>{{ not-youtube }}</p>
+                        <p>{{ not_youtube }}</p>
                     </td></tr>
                     <tr><td>
-                            <li>{{ happy-ai }}</li>
-                            <li>{{ advanced-techniques }}</li>
-                            <li>{{ i-enjoy }}</li>
+                            <li>{{ happy_ai }}</li>
+                            <li>{{ advanced_techniques }}</li>
+                            <li>{{ i_enjoy }}</li>
                     </td></tr>
                 </table>
             </div>
         </div>
 
         <div class="section">
-            <h2>{{ vote-topic }}</h2>
+            <h2>{{ vote_topic }}</h2>
             <div class="suggestion">
                 <form id="suggestion-form">
                     <table>
                         <tr>
                             <td colspan="2">
-                                <p>{{ suggest-time }}</p>
-                                <p>{{ time-disclaimer }}</p>
+                                <p>{{ suggest_time }}</p>
+                                <p>{{ time_disclaimer }}</p>
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="suggestion-time">{{ date-time }}</label></td>
+                            <td><label for="suggestion-time">{{ date_time }}</label></td>
                             <td><input type="datetime-local" id="suggestion-time" required></td>
                         </tr>
                         <tr>
-                            <td><label for="suggestion-contents">{{ lesson-contents }}:</label></td>
+                            <td><label for="suggestion-contents">{{ lesson_contents }}:</label></td>
                             <td><input type="text" id="suggestion-contents" required></td>
                         </tr>
                         <tr>
-                            <td><label for="suggestion-email">{{ your-email }}:</label></td>
+                            <td><label for="suggestion-email">{{ your_email }}:</label></td>
                             <td><input type="email" id="suggestion-email" required></td>
                         <tr>
                             <td></td>
@@ -107,24 +107,24 @@
 
         </div>
         <div class="section">
-            <h2>{{ english-or-spanish }}</h2>
-            <p>{{ alternative-language }}</p>
+            <h2>{{ english_or_spanish }}</h2>
+            <p>{{ alternative_language }}</p>
 
         </div>
         <div class="section">
-            <h2>{{ practical-classes }}</h2>
-            <p>{{ explain-practical }}</p>
+            <h2>{{ practical_classes }}</h2>
+            <p>{{ explain_practical }}</p>
 
         </div>
         <div class="section">
-            <h2>{{ use-google-meet }}</h2>
-            <p>{{ explain-google-meet }}</p>
+            <h2>{{ use_google_meet }}</h2>
+            <p>{{ explain_google_meet }}</p>
         </div>
     </div>
     <div class="foot-wrapper">
     </div>
     <script>
-        const base_locale = '{{ base-locale }}';
+        const base_locale = '{{ base_locale }}';
     </script>
     <script src="js/script.js?v=12"></script>
 </body>

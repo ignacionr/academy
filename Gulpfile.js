@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // Define a function to load translation data
 function getTranslationData(locale) {
-  const translationsPath = `./src/translations/${locale}.json`;
+  const translationsPath = `src/translations/${locale}.json`;
   return JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
 }
 

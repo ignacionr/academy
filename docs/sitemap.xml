@@ -3,13 +3,13 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://cppforeveryone.com/</loc>
-        <lastmod>2024-08-14T07:55:33Z</lastmod>
+        <lastmod>2024-08-14T08:10:55Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://cppforeveryone.com/en/index.html</loc>
-        <lastmod>2024-08-14T07:55:33Z</lastmod>
+        <lastmod>2024-08-14T08:10:55Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
         <xhtml:link rel="alternate" hreflang="es" href="https://cppforeveryone.com/es/index.html" />
