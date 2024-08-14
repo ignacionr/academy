@@ -5,7 +5,7 @@ pushd "$(dirname "$0")/../.."
 
 # Run your custom command
 scripts/generate-sitemap.sh
-if ! git diff --quiet sitemap.xml; then
+if ! git diff --quiet docs/sitemap.xml; then
     # If the file is modified, stage it for commit
     git add sitemap.xml
 fi

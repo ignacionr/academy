@@ -2,7 +2,7 @@
 
 # Define the template file and the output sitemap file
 TEMPLATE="sitemap.xml.template"
-OUTPUT="sitemap.xml"
+OUTPUT="docs/sitemap.xml"
 
 # Define the file paths for which you want to update the lastmod
 FILES=("index.html" "english.html" "spanish.html")
