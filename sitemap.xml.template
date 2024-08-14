@@ -8,17 +8,17 @@
         <priority>0.1</priority>
     </url>
     <url>
-        <loc>https://cppforeveryone.com/english.html</loc>
+        <loc>https://cppforeveryone.com/en/index.html</loc>
         <lastmod>{{date:english.html}}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://cppforeveryone.com/spanish.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://cppforeveryone.com/es/index.html" />
     </url>
     <url>
         <loc>https://cppforeveryone.com/spanish.html</loc>
-        <lastmod>{{date:spanish.html}}</lastmod>
+        <lastmod>{{date:es/index.html}}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://cppforeveryone.com/english.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://cppforeveryone.com/en/index.html" />
     </url>
 </urlset>
