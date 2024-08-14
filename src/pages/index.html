@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <base href="..">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=20">
-    {% include "google-tag-head.html" %}
-</head>
-
-<body>
-    {% include "google-tag-body.html" %}
+{% extends "base.html" %}
+{% block content %}
     <div class="hero">
         <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
         <h1>{{ title }}</h1>
@@ -60,6 +48,4 @@
         const base_locale = '{{ base_locale }}';
     </script>
     <script src="js/script.js?v=12"></script>
-</body>
-
-</html>
+{% endblock %}
