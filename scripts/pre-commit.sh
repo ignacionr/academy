@@ -7,7 +7,7 @@ pushd "$(dirname "$0")/../.."
 scripts/generate-sitemap.sh
 if ! git diff --quiet docs/sitemap.xml; then
     # If the file is modified, stage it for commit
-    git add sitemap.xml
+    git add docs/sitemap.xml
 fi
 
 # Optionally, you can prevent the commit if the command fails

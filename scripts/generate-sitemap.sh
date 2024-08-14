@@ -5,7 +5,7 @@ TEMPLATE="sitemap.xml.template"
 OUTPUT="docs/sitemap.xml"
 
 # Define the file paths for which you want to update the lastmod
-FILES=("index.html" "english.html" "spanish.html")
+FILES=("src/templates/index.html")
 
 # Function to get the last modification date of a file in the required format
 get_lastmod_date() {
