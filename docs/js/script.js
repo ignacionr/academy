@@ -16,7 +16,7 @@ function convertUTCToLocalTime(utcTimeString) {
 
 const backend = "https://script.google.com/macros/s/AKfycbzK8tsPCVw_tSGSGaLKTwk6vLc1rma3ANAfqWt8TeqvO3g-9tnnAU1v9sYXEkQ4Ja-51g/exec?lang=" + base_locale;
 
-fetch(`${backend}&maxResults=11`)
+fetch(`${backend}&maxResults=13`)
     .then(response => response.json())
     .then(data => {
         const lessons_container = document.getElementById("lessons-container");
