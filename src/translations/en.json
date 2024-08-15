@@ -22,5 +22,10 @@
     "upcoming_lessons": "Upcoming lessons",
     "use_google_meet": "We Use Google Meet",
     "vote_topic": "Vote for a time and topic",
-    "your_email": "Your email"
+    "your_email": "Your email",
+    "whatyouneed_title": "What you will need",
+    "comuter_with_internet": "A computer with internet access",
+    "webcam_and_microphone": "A webcam and microphone",
+    "browser_chrome": "A browser, preferably Chrome",
+    "github_account": "We recommend creating a GitHub account beforehand. Additionally, we will be using GitHub Codespaces as the programming environment, which means you don't need a powerful computer on your end. Codespaces allows you to write, run, and debug code directly in your web browser. No need to install anything on your computer!"
 }

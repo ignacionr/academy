@@ -22,5 +22,10 @@
     "upcoming_lessons": "Próximas lecciones",
     "use_google_meet": "Usamos Google Meet",
     "vote_topic": "Vota por un horario y tema",
-    "your_email": "Tu correo electrónico"
+    "your_email": "Tu correo electrónico",
+    "whatyouneed_title": "Lo que necesitarás",
+    "comuter_with_internet": "Una computadora con acceso a internet",
+    "webcam_and_microphone": "Una cámara web y un micrófono",
+    "browser_chrome": "Un navegador, preferiblemente Chrome",
+    "github_account": "Recomendamos crear una cuenta de GitHub de antemano. Además, utilizaremos GitHub Codespaces como entorno de programación, lo que significa que no necesitarás una computadora potente. Codespaces te permite escribir, ejecutar y depurar código directamente en tu navegador web. ¡No es necesario instalar nada en tu computadora!"
 }
