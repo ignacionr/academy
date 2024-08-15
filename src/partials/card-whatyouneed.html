@@ -1,8 +1,8 @@
 <table class="card">
     <tr>
-        <td>{{ whatyouneed_title }}</td>
+        <th colspan="2">{{ whatyouneed_title }}</th>
     </tr>
-    <tr>
+    <tr><td>{% include "browser.svg" %}</td>
         <td>
             <ul>
                 <li>{{computer_with_internet}}</li>
@@ -12,8 +12,11 @@
         </td>
     </tr>
     <tr>
+        <td style="text-align: center;">
+            {% include "github.svg" %}
+        </td>
         <td>
-            {{github_account}}
+            {{ github_account }}
         </td>
     </tr>
 </table>
