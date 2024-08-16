@@ -16,6 +16,14 @@ function convertUTCToLocalTime(utcTimeString) {
 
 const backend = "https://script.google.com/macros/s/AKfycbzK8tsPCVw_tSGSGaLKTwk6vLc1rma3ANAfqWt8TeqvO3g-9tnnAU1v9sYXEkQ4Ja-51g/exec?lang=" + base_locale;
 
+do_register = function(event_id) {
+    fetch(backend + "&op=payment&event_id=" + event_id)
+    .then(response => response.json())
+    .then(data => {
+        window.location.href = data.url;
+    });
+};
+
 fetch(`${backend}&maxResults=13`)
     .then(response => response.json())
     .then(data => {
@@ -53,8 +61,8 @@ fetch(`${backend}&maxResults=13`)
                 event_row.appendChild(startTime_cell);
                 // an anchor to register for the event
                 const register_cell = document.createElement("td");
-                const register_link = document.createElement("a");  
-                register_link.href = event.register_href;
+                const register_link = document.createElement("a");
+                register_link.onclick = function() { do_register(event.id); };
                 register_link.classList.add("button");
                 register_link.classList.add(`schedule-${event.schedule}`);
                 register_link.innerHTML = event.register_text;
