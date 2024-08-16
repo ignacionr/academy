@@ -1,6 +1,6 @@
 {
     "advanced_techniques": "Técnicas avanzadas desde el principio.",
-    "alternative_language": "Estás viendo los horarios de las clases en inglés. También los ofrecemos <a href='/es'>en español</a>.",
+    "alternative_language": "Estás viendo los horarios de las clases en castellano. También los ofrecemos <a href='/en'>en inglés</a>.",
     "base_locale": "es",
     "conway_line": "Lo que ves es un Juego de la Vida de Conway, escrito en C++ y ejecutándose en tu navegador. ¿Te gustaría hacer cosas como esta?",
     "date_time": "Fecha y hora",
