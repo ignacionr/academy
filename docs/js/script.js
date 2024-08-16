@@ -38,11 +38,19 @@ fetch(`${backend}&maxResults=13`)
             // create the row for the course
             const course_row = document.createElement("tr");
             // create the cell for the course title
-            const title_cell = document.createElement("td");
-            title_cell.colSpan = 2;
-            title_cell.innerHTML = `<h3>${courseInfo.icon}${courseInfo.title}</h3><p>${courseInfo.description}</p><p class='code'>${key}<p>`;
+            const image_cell = document.createElement("th");
+            image_cell.innerHTML = courseInfo.icon;
+            course_row.appendChild(image_cell);
+            const title_cell = document.createElement("th");
+            title_cell.innerText = courseInfo.title;
             course_row.appendChild(title_cell);
             target_table.appendChild(course_row);
+            const description_row = document.createElement("tr");
+            const description_cell = document.createElement("td");
+            description_cell.colSpan = 2;
+            description_cell. innerText = courseInfo.description;
+            description_row.appendChild(description_cell);
+            target_table.appendChild(description_row);
             // create the cell for the course kata
             const kata_row = document.createElement("tr");
             const kata_cell = document.createElement("td");
