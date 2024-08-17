@@ -16,8 +16,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <script>
-    function send_to(locale) {
-        window.location.href = locale + '/index.html';
+    function send_to(locale, country) {
+        var url = locale + '/index.html';
+        if (country) {
+            url += '?country=' + country;
+        }
+        window.location.href = url;
     }
     // detect if the user prefers Spanish
     if (window.navigator && window.navigator.language && window.navigator.language.startsWith('es')) {
@@ -29,11 +33,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .then(data => {
                 const country = data.country;
                 const spanishSpeakingCountries = ["AR", "BO", "CL", "CO", "CR", "CU", "DO", "EC", "SV", "GQ", "GT", "HN", "MX", "NI", "PA", "PY", "PE", "PR", "ES", "UY", "VE"];
-                
                 if (spanishSpeakingCountries.includes(country)) {
-                send_to('es');
+                send_to('es', country);
                 } else {
-                send_to('en');
+                send_to('en', country);
                 }
             })
             .catch(error => console.error('Error fetching IP info:', error));
