@@ -296,6 +296,9 @@ div.youtube iframe {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     div.content {
         display: flex;
         justify-content: space-between;
@@ -305,6 +308,7 @@ div.youtube iframe {
         align-items: top;
         place-items: top;
         padding-left: 20px;
+        padding-right: 50px;
         background-color: #fefefe;
     }
 

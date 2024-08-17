@@ -23,47 +23,8 @@
                 {% include "card-whatyouneed.html" %}
                 {% include "card-meet-trainer.html" %} 
             </div>
-                <div class="arrow left-arrow">&#x2190;</div>
-                <div class="arrow right-arrow">&#x2192;</div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const carousel = document.querySelector('.carousel');
-
-    function showArrows() {
-        leftArrow.classList.remove('hidden');
-        rightArrow.classList.remove('hidden');
-
-        setTimeout(() => {
-            leftArrow.classList.add('hidden');
-            rightArrow.classList.add('hidden');
-        }, 4000);  // Arrows fade after 4 seconds of inactivity
-    }
-
-    // Show arrows when the page loads
-    showArrows();
-
-    // Show arrows when user interacts with the carousel
-    carousel.addEventListener('scroll', showArrows);
-
-    // Optional: Add functionality to the arrows to scroll the carousel
-    leftArrow.addEventListener('click', () => {
-        carousel.scrollBy({
-            left: -carousel.offsetWidth,
-            behavior: 'smooth'
-        });
-    });
-
-    rightArrow.addEventListener('click', () => {
-        carousel.scrollBy({
-            left: carousel.offsetWidth,
-            behavior: 'smooth'
-        });
-    });
-});
-
-            </script>
+            <div class="arrow left-arrow">&#x2190;</div>
+            <div class="arrow right-arrow">&#x2192;</div>
         </div>
 
         <div class="section">
@@ -89,5 +50,5 @@
     <script>
         const base_locale = '{{ base_locale }}';
     </script>
-    <script src="js/script.js?v=17"></script>
+    <script src="js/script.js?v=18"></script>
 {% endblock %}

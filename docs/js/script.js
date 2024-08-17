@@ -24,7 +24,7 @@ do_register = function(event_id) {
     });
 };
 
-fetch(`${backend}&maxResults=13`)
+fetch(`${backend}&maxResults=15`)
     .then(response => response.json())
     .then(data => {
         const lessons_container = document.getElementById("lessons-container");
@@ -101,5 +101,42 @@ suggestion_form.addEventListener("submit", function(event) {
     .then(response => response.json())
     .then(data => {
         suggestion_form.parentElement.innerText = data.message;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    const carousel = document.querySelector('.carousel');
+
+    function showArrows() {
+        leftArrow.classList.remove('hidden');
+        rightArrow.classList.remove('hidden');
+
+        setTimeout(() => {
+            leftArrow.classList.add('hidden');
+            rightArrow.classList.add('hidden');
+        }, 4000);  // Arrows fade after 4 seconds of inactivity
+    }
+
+    // Show arrows when the page loads
+    showArrows();
+
+    // Show arrows when user interacts with the carousel
+    carousel.addEventListener('scroll', showArrows);
+
+    // Optional: Add functionality to the arrows to scroll the carousel
+    leftArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: -carousel.offsetWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    rightArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: carousel.offsetWidth,
+            behavior: 'smooth'
+        });
     });
 });
