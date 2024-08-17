@@ -90,8 +90,21 @@ window.addEventListener("hashchange", function() {
         const lessons_container = document.getElementById("lessons-container");
         course_card = create_course_card(course_key, courses[course_key], lessons_container);
     }
-    // scroll to the course card
-    course_card.scrollIntoView({ behavior: 'smooth' });
+// Temporarily move the card up
+course_card.style.visibility = 'hidden';
+course_card.style.position = 'relative';
+course_card.style.top = '-100px';
+
+// Force reflow
+course_card.offsetHeight;
+
+// Scroll it into view
+course_card.scrollIntoView({ behavior: 'smooth' });
+
+// Reset the styles
+course_card.style.visibility = '';
+course_card.style.position = '';
+course_card.style.top = '';
     // highlight the course card
     course_card.classList.add("highlight");
     setTimeout(function() {
