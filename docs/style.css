@@ -261,6 +261,41 @@ div.youtube iframe {
     height: 100%;
 }
 
+
+.arrow {
+    position: absolute;
+    top: 1000px;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+    width: 45%;
+    font-size: 76pt;
+}
+
+.arrow-container {
+    position: relative;
+    top: -400pt;
+}
+
+.left-arrow {
+}
+
+.right-arrow {
+    text-align: right;
+}
+
+.arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 @media screen and (min-width: 768px) {
     div.content {
         display: flex;
@@ -291,6 +326,7 @@ div.youtube iframe {
     .card {
         width: 40%;
     }
+    .arrow {display: none;}
 }
 
 @media screen and (min-width: 1020px) {
@@ -318,4 +354,5 @@ div.youtube iframe {
     .card {
         width: 30%;
     }
+    .arrow {display: none;}
 }
