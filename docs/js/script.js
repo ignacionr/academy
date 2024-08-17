@@ -26,6 +26,15 @@ do_register = function(event_id) {
     });
 };
 
+const translation = {
+    "es": {
+        "track": "Nivel "
+    },
+    "en": {
+        "track": "Level "
+    }
+};
+
 function create_course_card(key, value, lessons_container) {
     const target_table = document.createElement("table");
     target_table.id = key;
@@ -35,12 +44,15 @@ function create_course_card(key, value, lessons_container) {
     const events = value.events;
     // create the row for the course
     const course_row = document.createElement("tr");
+    course_row.style.backgroundColor = courseInfo.schedule[2];
     // create the cell for the course title
     const image_cell = document.createElement("th");
     image_cell.innerHTML = courseInfo.icon;
+    image_cell.classList.add("schedule-title");
     course_row.appendChild(image_cell);
     const title_cell = document.createElement("th");
     title_cell.innerText = courseInfo.title;
+    title_cell.classList.add("schedule-title");
     course_row.appendChild(title_cell);
     target_table.appendChild(course_row);
     const description_row = document.createElement("tr");
@@ -115,8 +127,10 @@ function create_index_card(key, value, index_container) {
     // create the cell for the course title
     const title_cell = document.createElement("th");
     title_cell.colSpan = 2;
-    title_cell.style.backgroundColor = color;
+    schedule_row.style.backgroundColor = color;
     schedule_row.appendChild(title_cell);
+    title_cell.textContent = translation[base_locale].track + schedule[0];
+    title_cell.classList.add("schedule-title");
     target_table.appendChild(schedule_row);
     // go through each of the events of the course
     for (const course of value) {
