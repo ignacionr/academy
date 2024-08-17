@@ -140,7 +140,6 @@ fetch(`${backend}&maxResults=150`)
     .then(response => response.json())
     .then(data => {
         courses = data;
-        const lessons_container = document.getElementById("lessons-container");
         // aggregate the courses by schedule (level)
         const by_schedule = Object.entries(data).reduce((acc, [key, value]) => {
             const schedule_key = value.courseInfo.schedule[0];
@@ -151,7 +150,7 @@ fetch(`${backend}&maxResults=150`)
             return acc;
         }, {});
         for (const [key, value] of Object.entries(by_schedule)) {
-            create_index_card(key, value, lessons_container);
+            create_index_card(key, value, document.getElementById("index-container"));
         }
         // go through each of the properties of the data object
         // for (const [key, value] of Object.entries(data)) {
