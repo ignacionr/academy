@@ -80,7 +80,9 @@ function create_course_card(key, value, lessons_container) {
 }
 
 // catch hash changes
-window.addEventListener("hashchange", function() {
+window.addEventListener("hashchange", function(event) {
+    // prevent the default behavior
+    event.preventDefault();
     const hash = window.location.hash;
     const course_key = hash.substring(1);
     // find if there is already a card for the course
@@ -90,21 +92,8 @@ window.addEventListener("hashchange", function() {
         const lessons_container = document.getElementById("lessons-container");
         course_card = create_course_card(course_key, courses[course_key], lessons_container);
     }
-// Temporarily move the card up
-course_card.style.visibility = 'hidden';
-course_card.style.position = 'relative';
-course_card.style.top = '-100px';
-
-// Force reflow
-course_card.offsetHeight;
-
-// Scroll it into view
-course_card.scrollIntoView({ behavior: 'smooth' });
-
-// Reset the styles
-course_card.style.visibility = '';
-course_card.style.position = '';
-course_card.style.top = '';
+    // scroll to the course card
+    course_card.scrollIntoView({ behavior: 'smooth' });
     // highlight the course card
     course_card.classList.add("highlight");
     setTimeout(function() {
