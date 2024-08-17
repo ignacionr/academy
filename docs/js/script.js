@@ -101,14 +101,14 @@ window.addEventListener("hashchange", function(event) {
     }, 3000);
 });
 
-function create_index_card(key, value, lessons_container) {
+function create_index_card(key, value, index_container) {
     const schedule = value[0].courseInfo.schedule;
     const color = schedule[2];
     const target_table = document.createElement("table");
     target_table.classList.add("card");
     target_table.style.borderColor = color;
     target_table.style.accentColor = color;
-    lessons_container.appendChild(target_table);
+    index_container.appendChild(target_table);
     const schedule_row = document.createElement("tr");
     // create the cell for the course title
     const title_cell = document.createElement("th");
@@ -134,6 +134,7 @@ function create_index_card(key, value, lessons_container) {
         course_row.appendChild(link_cell);
         target_table.appendChild(course_row);
     }
+    return target_table;
 }
 
 fetch(`${backend}&maxResults=150`)
