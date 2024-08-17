@@ -90,6 +90,8 @@ window.addEventListener("hashchange", function(event) {
     if (!course_card) {
         // if not, create the card
         const lessons_container = document.getElementById("lessons-container");
+        // remove all the children of the lessons container
+        lessons_container.innerHTML = "";
         course_card = create_course_card(course_key, courses[course_key], lessons_container);
     }
     // scroll to the course card

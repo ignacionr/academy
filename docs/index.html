@@ -17,10 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
     function send_to(locale, country) {
-        var url = locale + '/index.html';
-        if (country) {
-            url += '?country=' + country;
-        }
+        var url = locale + '/';
         window.location.href = url;
     }
     // detect if the user prefers Spanish
