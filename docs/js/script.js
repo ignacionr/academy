@@ -1,4 +1,4 @@
-function convertUTCToLocalTime(utcTimeString) {
+function convertUTCToLocalTime(utcTimeString, with_svg = false) {
     const utcDate = new Date(utcTimeString);
 
     // Get the user's local date and time string with detailed options
@@ -11,7 +11,29 @@ function convertUTCToLocalTime(utcTimeString) {
         minute: 'numeric', 
         timeZoneName: 'long'
     };
-    return utcDate.toLocaleString(base_locale, options);
+
+    var svg = "";
+    if (with_svg) {
+        const month = utcDate.toLocaleString(base_locale, { month: 'short' });
+        const day = utcDate.toLocaleString(base_locale, { day: 'numeric' });
+        const weekday = utcDate.toLocaleString(base_locale, { weekday: 'short' });
+        svg = `<svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:block; float:left; margin-right: 10px">
+  <!-- Background rectangle -->
+  <rect x="5" y="5" width="90" height="90" rx="10" ry="10" fill="#f0f0f0" stroke="#ccc" stroke-width="2"/>
+
+  <!-- Top bar (month) -->
+  <rect x="5" y="5" width="90" height="25" fill="#4A90E2"/>
+  <text x="50" y="22" font-family="Arial" font-size="12" fill="white" text-anchor="middle">${month}</text>
+
+  <!-- Weekday -->
+  <text x="50" y="45" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">${weekday}</text>
+
+  <!-- Date number -->
+  <text x="50" y="75" font-family="Arial" font-size="30" fill="#333" text-anchor="middle">${day}</text>
+</svg>&nbsp;`;
+    }
+
+    return svg + utcDate.toLocaleString(base_locale, options);
 }
 
 const backend = "https://hook-forwarder.ignacio-c20.workers.dev/?lang=" + base_locale;
@@ -75,7 +97,7 @@ function create_course_card(key, value, lessons_container) {
         const event_row = document.createElement("tr");
         // create the cell for the event start time
         const startTime_cell = document.createElement("td");
-        startTime_cell.textContent = convertUTCToLocalTime(event.startTime);
+        startTime_cell.innerHTML = convertUTCToLocalTime(event.startTime, true);
         event_row.appendChild(startTime_cell);
         // an anchor to register for the event
         const register_cell = document.createElement("td");
