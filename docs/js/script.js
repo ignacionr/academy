@@ -14,22 +14,15 @@ function convertUTCToLocalTime(utcTimeString, with_svg = false) {
 
     var svg = "";
     if (with_svg) {
-        const month = utcDate.toLocaleString(base_locale, { month: 'short' });
+        const month = utcDate.toLocaleString(base_locale, { month: 'short' }).toUpperCase();
         const day = utcDate.toLocaleString(base_locale, { day: 'numeric' });
-        const weekday = utcDate.toLocaleString(base_locale, { weekday: 'short' });
+        const weekday = utcDate.toLocaleString(base_locale, { weekday: 'short' }).toUpperCase();
         svg = `<svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:block; float:left; margin-right: 10px">
-  <!-- Background rectangle -->
   <rect x="5" y="5" width="90" height="90" rx="10" ry="10" fill="#f0f0f0" stroke="#ccc" stroke-width="2"/>
-
-  <!-- Top bar (month) -->
-  <rect x="5" y="5" width="90" height="25" fill="#4A90E2"/>
-  <text x="50" y="22" font-family="Arial" font-size="12" fill="white" text-anchor="middle">${month}</text>
-
-  <!-- Weekday -->
+  <rect x="5" y="5" width="90" height="25" fill="#C0C0C0"/>
+  <text x="50" y="22" font-family="Arial" font-size="24" font-weight="900" fill="white" text-anchor="middle">${month}</text>
   <text x="50" y="45" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">${weekday}</text>
-
-  <!-- Date number -->
-  <text x="50" y="75" font-family="Arial" font-size="30" fill="#333" text-anchor="middle">${day}</text>
+  <text x="50" y="75" font-family="Arial" font-size="36" fill="#333" text-anchor="middle">${day}</text>
 </svg>&nbsp;`;
     }
 
@@ -73,20 +66,21 @@ function create_course_card(key, value, lessons_container) {
     image_cell.classList.add("schedule-title");
     course_row.appendChild(image_cell);
     const title_cell = document.createElement("th");
+    title_cell.colSpan = 2;
     title_cell.innerText = courseInfo.title;
     title_cell.classList.add("schedule-title");
     course_row.appendChild(title_cell);
     target_table.appendChild(course_row);
     const description_row = document.createElement("tr");
     const description_cell = document.createElement("td");
-    description_cell.colSpan = 2;
+    description_cell.colSpan = 3;
     description_cell. innerText = courseInfo.description;
     description_row.appendChild(description_cell);
     target_table.appendChild(description_row);
     // create the cell for the course kata
     const kata_row = document.createElement("tr");
     const kata_cell = document.createElement("td");
-    kata_cell.colSpan = 2;
+    kata_cell.colSpan = 3;
     kata_cell.textContent = courseInfo.kata;
     kata_row.appendChild(kata_cell);
     // add the course row to the table
@@ -97,6 +91,7 @@ function create_course_card(key, value, lessons_container) {
         const event_row = document.createElement("tr");
         // create the cell for the event start time
         const startTime_cell = document.createElement("td");
+        startTime_cell.colSpan = 2;
         startTime_cell.innerHTML = convertUTCToLocalTime(event.startTime, true);
         event_row.appendChild(startTime_cell);
         // an anchor to register for the event
