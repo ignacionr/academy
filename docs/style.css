@@ -88,6 +88,24 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited, a:link {
+    color: #000;
+}
+
+.button.grey {
+    background-color: #f1f1f1;
+    color: #000;
+    font-weight: lighter;
+}
+
+table a tr td {
+    width: 100%;
+}
+
 table tr:first-child {
     height: 70px;
 }
@@ -207,6 +225,10 @@ h3 svg {
     display: flex;
     gap: 10px;
     padding-bottom: 10px;
+}
+
+.full-width {
+    width: 100%;
 }
 
 .card {
@@ -345,6 +367,12 @@ div.youtube iframe {
     .card {
         width: 40%;
     }
+    .full-width .card{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
     .arrow {display: none;}
 }
 
@@ -372,6 +400,11 @@ div.youtube iframe {
 
     .card {
         width: 30%;
+    }
+    .full-width .card{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .arrow {display: none;}
 }

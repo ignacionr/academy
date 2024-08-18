@@ -19,18 +19,19 @@
     <div class="content">
         <div>
             <div class="gallery-container" id="index-container">
+                <div class="arrow left-arrow">&#x2190;</div>
+                <div class="arrow right-arrow">&#x2192;</div>
+                </div>
+            <div class="gallery-container full-width" id="lessons-container">
+            </div>
+        </div>
+        <div>
+            <div class="gallery-container" >
                 {% include "card-whatyouneed.html" %}
                 {% include "card-meet-trainer.html" %}
                 {% include "card-practical-classes.html" %}
             </div>
-            <div class="arrow left-arrow">&#x2190;</div>
-            <div class="arrow right-arrow">&#x2192;</div>
         </div>
-        <div>
-            <div class="gallery-container" id="lessons-container">
-            </div>
-        </div>
-
         <div class="section">
             <h2>{{ use_google_meet }}</h2>
             <p>{{ explain_google_meet }}</p>
@@ -41,5 +42,5 @@
     <script>
         const base_locale = '{{ base_locale }}';
     </script>
-    <script src="js/script.js?v=25"></script>
+    <script src="js/script.js?v=26"></script>
 {% endblock %}

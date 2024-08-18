@@ -135,6 +135,8 @@ function create_index_card(key, value, index_container) {
     // go through each of the events of the course
     for (const course of value) {
         // create the row for the event
+        const anchor = document.createElement("a");
+        anchor.href = `${base_locale}/#${course.key}`;
         const course_row = document.createElement("tr");
         course_row.style.borderColor = color;
         // create the cell for the event start time
@@ -143,12 +145,12 @@ function create_index_card(key, value, index_container) {
         course_row.appendChild(title_cell);
         const link_cell = document.createElement("td");
         const title_link = document.createElement("a");
-        title_link.classList.add("button");
+        title_link.classList.add("button","grey");
         title_link.textContent = "📚";
-        title_link.href = `${base_locale}/#${course.key}`;
         link_cell.appendChild(title_link);
         course_row.appendChild(link_cell);
-        target_table.appendChild(course_row);
+        anchor.appendChild(course_row);
+        target_table.appendChild(anchor);
     }
     return target_table;
 }
