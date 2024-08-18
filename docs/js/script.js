@@ -61,12 +61,12 @@ function create_course_card(key, value, lessons_container) {
     const course_row = document.createElement("tr");
     course_row.style.backgroundColor = courseInfo.schedule[2];
     // create the cell for the course title
-    const image_cell = document.createElement("th");
-    image_cell.innerHTML = courseInfo.icon;
-    image_cell.classList.add("schedule-title");
-    course_row.appendChild(image_cell);
+    // const image_cell = document.createElement("th");
+    // image_cell.innerHTML = courseInfo.icon;
+    // image_cell.classList.add("schedule-title");
+    // course_row.appendChild(image_cell);
     const title_cell = document.createElement("th");
-    title_cell.colSpan = 2;
+    title_cell.colSpan = 3;
     title_cell.innerText = courseInfo.title;
     title_cell.classList.add("schedule-title");
     course_row.appendChild(title_cell);
