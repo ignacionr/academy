@@ -323,61 +323,11 @@ div.youtube iframe {
     pointer-events: none;
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    div.offer {
-        padding: 20px;
-        margin-bottom: 20px;
-        line-height: 17pt;
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-    
-    div.offer p {
-        margin-left: 15pt;
-    }
-    
-    div.content {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        align-items: top;
-        place-items: top;
-        padding-left: 20px;
-        padding-right: 50px;
-        background-color: #fefefe;
-    }
-
-    div.gallery-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    div.section {
-        width: 40%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .card {
-        width: 40%;
-    }
-    .full-width .card{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
-    .arrow {display: none;}
+li {
+    list-style-type: none;
+    border-bottom: #e0e0e0 1px solid;
 }
+
 
 @media screen and (min-width: 1020px) {
     div.content {
@@ -404,10 +354,15 @@ div.youtube iframe {
     .card {
         width: 30%;
     }
-    .full-width .card{
+    #index-card {
+        width: 30% !important;
+    }
+    .full-width {
         width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
+    }
+    .full-width .card{
+        width: 100%;
+        margin-left: 0;
     }
     .arrow {display: none;}
 }

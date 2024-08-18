@@ -132,6 +132,52 @@ window.addEventListener("hashchange", function(event) {
     }, 3000);
 });
 
+function display_schedule_courses(schedule_key) {
+
+    const show_id = `schedule-${schedule_key}`;
+    for (const element of document.getElementsByClassName("schedule-courses")) {
+        if (element.id === show_id) {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+}
+
+function add_schedule_to_index_card(schedule, courses, target_table) {
+    const schedule_row = document.createElement("tr");
+    // create the cell for the schedule title
+    const title_cell = document.createElement("th");
+    title_cell.colSpan = 2;
+    schedule_row.style.backgroundColor = schedule[2];
+    schedule_row.appendChild(title_cell);
+    title_cell.textContent = translation[base_locale].track + schedule[0];
+    title_cell.onclick = function() { display_schedule_courses(schedule[0]); };
+    title_cell.classList.add("schedule-title");
+    target_table.appendChild(schedule_row);
+    const courses_row = document.createElement("tr");
+    const courses_cell = document.createElement("td");
+    courses_cell.colSpan = 2;
+    courses_row.appendChild(courses_cell);
+    courses_cell.id = `schedule-${schedule[0]}`;
+    courses_cell.classList.add("schedule-courses");
+    courses_cell.style.display = "none";
+    const ul = document.createElement("ul");
+    courses_cell.appendChild(ul);
+    for (const course of courses) {
+        const li = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.href = `${base_locale}/#${course.key}`;
+        const course_link = document.createElement("a");
+        course_link.textContent = course.courseInfo.title;
+        course_link.href = `${base_locale}/#${course.key}`;
+        course_link.classList.add();
+        li.appendChild(course_link);
+        ul.appendChild(li);
+    }
+    target_table.appendChild(courses_row);
+}
+
 function create_index_card(key, value, index_container) {
     const schedule = value[0].courseInfo.schedule;
     const color = schedule[2];
@@ -185,48 +231,17 @@ fetch(`${backend}&maxResults=150`)
             acc[schedule_key].push(Object.assign(value, { key: key }));
             return acc;
         }, {});
+        const index_card = document.getElementById("index-card");
         for (const [key, value] of Object.entries(by_schedule)) {
-            create_index_card(key, value, document.getElementById("index-container"));
+            add_schedule_to_index_card(value[0].courseInfo.schedule, value, index_card);
         }
+        display_schedule_courses(Object.keys(by_schedule)[0]);
+        // for (const [key, value] of Object.entries(by_schedule)) {
+        //     create_index_card(key, value, document.getElementById("index-container"));
+        // }
         // go through each of the properties of the data object
         // for (const [key, value] of Object.entries(data)) {
         //     create_course_card(key, value, lessons_container);
         // }
     });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const carousel = document.querySelector('.carousel');
-
-    function showArrows() {
-        leftArrow.classList.remove('hidden');
-        rightArrow.classList.remove('hidden');
-
-        setTimeout(() => {
-            leftArrow.classList.add('hidden');
-            rightArrow.classList.add('hidden');
-        }, 4000);  // Arrows fade after 4 seconds of inactivity
-    }
-
-    // Show arrows when the page loads
-    showArrows();
-
-    // Show arrows when user interacts with the carousel
-    carousel.addEventListener('scroll', showArrows);
-
-    // Optional: Add functionality to the arrows to scroll the carousel
-    leftArrow.addEventListener('click', () => {
-        carousel.scrollBy({
-            left: -carousel.offsetWidth,
-            behavior: 'smooth'
-        });
-    });
-
-    rightArrow.addEventListener('click', () => {
-        carousel.scrollBy({
-            left: carousel.offsetWidth,
-            behavior: 'smooth'
-        });
-    });
-});
