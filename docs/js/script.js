@@ -108,12 +108,7 @@ function create_course_card(key, value, lessons_container) {
     return target_table;
 }
 
-// catch hash changes
-window.addEventListener("hashchange", function(event) {
-    // prevent the default behavior
-    event.preventDefault();
-    const hash = window.location.hash;
-    const course_key = hash.substring(1);
+function show_course(course_key) {
     // find if there is already a card for the course
     var course_card = document.getElementById(course_key);
     if (!course_card) {
@@ -125,11 +120,20 @@ window.addEventListener("hashchange", function(event) {
     }
     // scroll to the course card
     course_card.scrollIntoView({ behavior: 'smooth' });
-    // highlight the course card
-    course_card.classList.add("highlight");
-    setTimeout(function() {
-        course_card.classList.remove("highlight");
-    }, 3000);
+}
+
+function show_course_by_hash() {
+    const hash = window.location.hash;
+    if (hash.length > 1) {    
+        const course_key = hash.substring(1);
+        show_course(course_key);
+    }
+}
+
+window.addEventListener("hashchange", function(event) {
+    // prevent the default behavior
+    event.preventDefault();
+    show_course_by_hash();
 });
 
 function display_schedule_courses(schedule_key) {
@@ -242,12 +246,6 @@ fetch(`${backend}&maxResults=150`)
             add_schedule_to_index_card(value[0].courseInfo.schedule, value, index_card);
         }
         display_schedule_courses(Object.keys(by_schedule)[0]);
-        // for (const [key, value] of Object.entries(by_schedule)) {
-        //     create_index_card(key, value, document.getElementById("index-container"));
-        // }
-        // go through each of the properties of the data object
-        // for (const [key, value] of Object.entries(data)) {
-        //     create_course_card(key, value, lessons_container);
-        // }
+        show_course_by_hash();
     });
 

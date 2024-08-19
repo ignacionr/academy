@@ -94,8 +94,7 @@ tr:hover {
 
 a {
     text-decoration: none;
-    border: #000 1px solid;
-
+    border: #808080 1px solid;
     padding: 2px 8px;
 }
 
@@ -133,9 +132,8 @@ a.button {
 }
 
 a.button:hover {
-    background-color: #e91e63;
+    background-color: #1e58d4d3;
 }
-
 a.schedule-A {
     background-color: #7ca867;
 }
