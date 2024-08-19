@@ -177,7 +177,7 @@ function display_schedule_courses(schedule_key) {
             element.style.display = "none";
         }
     }
-    current_schedule = schedule_key;
+    current_schedule = show_id ? schedule_key : null;
 }
 
 function add_schedule_to_index_card(schedule, courses, target_table) {
