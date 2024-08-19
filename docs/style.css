@@ -150,6 +150,17 @@ a.schedule-D {
     background-color: #FFD700;
 }
 
+.registered {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+div.time-left {
+    text-align: center;
+    background-color: #ff2020;
+    color: white;
+    font-size: 1em;
+}
 
 h2 {
     margin-top: 36pt;

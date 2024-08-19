@@ -43,10 +43,16 @@ do_register = function(event_id) {
 
 const translation = {
     "es": {
-        "track": "Nivel "
+        "track": "Nivel ",
+        "hours": "horas",
+        "minutes": "minutos",
+        "left": "para registrarse"
     },
     "en": {
-        "track": "Level "
+        "track": "Level ",
+        "hours": "hours",
+        "minutes": "minutes",
+        "left": "left to register"
     }
 };
 
@@ -86,14 +92,24 @@ function create_course_card(key, value, lessons_container) {
     // add the course row to the table
     target_table.appendChild(kata_row);
     // go through each of the events of the course
+    const now = new Date();
     for (const event of events) {
         // create the row for the event
         const event_row = document.createElement("tr");
         // create the cell for the event start time
         const startTime_cell = document.createElement("td");
         startTime_cell.colSpan = 2;
-        startTime_cell.innerHTML = convertUTCToLocalTime(event.startTime, true);
+        var calendar_html = convertUTCToLocalTime(event.startTime, true);
+        if (event.registered) {
+            calendar_html += ` <span class='registered'>${"&#x1F464;".repeat(event.registered)}</span>`;
+        }
+        startTime_cell.innerHTML = calendar_html;
         event_row.appendChild(startTime_cell);
+        // the registration time is the event.startTime minus 12 hours
+        const registrationTime = new Date(event.startTime);
+        registrationTime.setHours(registrationTime.getHours() - 12);
+        // calculate the time left for registration
+        const timeLeft = registrationTime - now;
         // an anchor to register for the event
         const register_cell = document.createElement("td");
         const register_link = document.createElement("a");
@@ -102,6 +118,17 @@ function create_course_card(key, value, lessons_container) {
         register_link.classList.add(`schedule-${event.schedule}`);
         register_link.innerHTML = event.register_text;
         register_cell.appendChild(register_link);
+        if (timeLeft < 0) {
+            const timeLeft_div = document.createElement("div");
+            register_cell.appendChild(timeLeft_div);
+            timeLeft_div.classList.add("time-left");
+            timeLeft_div.textContent = "Extended registration";
+        } else if (timeLeft < 1000 * 60 * 60 * 24) {
+            const timeLeft_div = document.createElement("div");
+            register_cell.appendChild(timeLeft_div);
+            timeLeft_div.classList.add("time-left");
+            timeLeft_div.textContent = `${Math.floor(timeLeft / (1000 * 60 * 60))} ${translation[base_locale].hours} ${translation[base_locale].left}`;
+        }
         event_row.appendChild(register_cell);
         target_table.appendChild(event_row);
     }
