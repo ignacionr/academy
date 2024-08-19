@@ -94,6 +94,9 @@ tr:hover {
 
 a {
     text-decoration: none;
+    border: #000 1px solid;
+
+    padding: 2px 8px;
 }
 
 a:visited, a:link {
