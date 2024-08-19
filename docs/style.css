@@ -21,6 +21,7 @@ div.hero {
     font-size: 20pt;
     line-height: 30pt;
     letter-spacing: 2.15pt;
+    cursor: hand;
 }
 
 div.hero img {
