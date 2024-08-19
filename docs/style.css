@@ -251,7 +251,7 @@ h3 svg {
     border-radius: 8px;
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
     width: 90%;
-    min-height: 500px;
+    min-height: 50px;
     flex-shrink: 0;
     scroll-snap-align: center;
     text-align: center;
