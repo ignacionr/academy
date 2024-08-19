@@ -361,6 +361,7 @@ li {
 
     .card {
         width: 30%;
+        min-height: 50px;
     }
     #index-card {
         width: 30% !important;

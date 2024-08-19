@@ -167,9 +167,9 @@ window.addEventListener("hashchange", function(event) {
     show_course_by_hash();
 });
 
+var current_schedule = null;
 function display_schedule_courses(schedule_key) {
-
-    const show_id = `schedule-${schedule_key}`;
+    const show_id = schedule_key === current_schedule ? null : `schedule-${schedule_key}`;
     for (const element of document.getElementsByClassName("schedule-courses")) {
         if (element.id === show_id) {
             element.style.display = "block";
@@ -177,6 +177,7 @@ function display_schedule_courses(schedule_key) {
             element.style.display = "none";
         }
     }
+    current_schedule = schedule_key;
 }
 
 function add_schedule_to_index_card(schedule, courses, target_table) {
