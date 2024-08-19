@@ -169,6 +169,12 @@ function add_schedule_to_index_card(schedule, courses, target_table) {
         const anchor = document.createElement("a");
         anchor.href = `${base_locale}/#${course.key}`;
         const course_link = document.createElement("a");
+        course_link.classList.add("button");
+        course_link.classList.add(`schedule-${schedule[0]}`);
+        course_link.style.fontSize = "0.8em";
+        course_link.style.textAlign = "left";
+        course_link.style.width = "100%";
+        course_link.style.marginBottom = "5px";
         course_link.textContent = course.courseInfo.title;
         course_link.href = `${base_locale}/#${course.key}`;
         course_link.classList.add();
