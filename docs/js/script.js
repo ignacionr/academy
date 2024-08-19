@@ -112,6 +112,10 @@ function show_course(course_key) {
     // find if there is already a card for the course
     var course_card = document.getElementById(course_key);
     if (!course_card) {
+        if (!courses[course_key]) {
+            console.warn(`Course ${course_key} not found`);
+            return;
+        }
         // if not, create the card
         const lessons_container = document.getElementById("lessons-container");
         // remove all the children of the lessons container
