@@ -99,7 +99,8 @@ a {
     padding: 2px 8px;
 }
 
-a:visited, a:link {
+a:visited,
+a:link {
     color: #000;
 }
 
@@ -135,6 +136,7 @@ a.button {
 a.button:hover {
     background-color: #1e58d4d3;
 }
+
 a.schedule-A {
     background-color: #7ca867;
 }
@@ -337,33 +339,46 @@ li {
     list-style-type: none;
     border-bottom: #e0e0e0 1px solid;
 }
+
 .telegram-button {
     position: fixed;
-    bottom: 20px; /* Adjust this to position the button */
+    bottom: 20px;
+    /* Adjust this to position the button */
     right: 20px;
-    padding: 5px; /* Reduced padding for a more compact look */
-    background-color: #2a2a2a; /* Dark gray to match the site’s background */
-    border-radius: 50%; /* Makes the button round */
-    border: 2px solid #0088cc; /* Light blue border */
+    padding: 5px;
+    /* Reduced padding for a more compact look */
+    background-color: #2a2a2a;
+    /* Dark gray to match the site’s background */
+    border-radius: 50%;
+    /* Makes the button round */
+    border: 2px solid #0088cc;
+    /* Light blue border */
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the SVG within the button */
-  }
-  
-  .telegram-button img {
-    height: 40px; /* Larger size for visibility */
-    width: 40px; /* Ensures the SVG stays square */
-  }
-  
-  .telegram-button:hover {
-    background-color: #1f1f1f; /* Slightly darker on hover */
-    border-color: #007bb5; /* Darker blue on hover */
-  }
-  
-  
-  
+    justify-content: center;
+    /* Centers the SVG within the button */
+}
+
+.telegram-button img {
+    height: 40px;
+    /* Larger size for visibility */
+    width: 40px;
+    /* Ensures the SVG stays square */
+}
+
+.telegram-button:hover {
+    background-color: #1f1f1f;
+    /* Slightly darker on hover */
+    border-color: #007bb5;
+    /* Darker blue on hover */
+}
+
 @media screen and (min-width: 1020px) {
+    body {
+        overflow: hidden;
+    }
+
     div.content {
         display: flex;
         justify-content: space-between;
@@ -389,15 +404,21 @@ li {
         width: 30%;
         min-height: 50px;
     }
+
     #index-card {
         width: 30% !important;
     }
+
     .full-width {
         width: 60%;
     }
-    .full-width .card{
+
+    .full-width .card {
         width: 100%;
         margin-left: 0;
     }
-    .arrow {display: none;}
+
+    .arrow {
+        display: none;
+    }
 }
