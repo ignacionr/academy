@@ -336,7 +336,32 @@ li {
     list-style-type: none;
     border-bottom: #e0e0e0 1px solid;
 }
-
+.telegram-button {
+    position: fixed;
+    bottom: 20px; /* Adjust this to position the button */
+    right: 20px;
+    padding: 5px; /* Reduced padding for a more compact look */
+    background-color: #2a2a2a; /* Dark gray to match the site’s background */
+    border-radius: 50%; /* Makes the button round */
+    border: 2px solid #0088cc; /* Light blue border */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the SVG within the button */
+  }
+  
+  .telegram-button img {
+    height: 40px; /* Larger size for visibility */
+    width: 40px; /* Ensures the SVG stays square */
+  }
+  
+  .telegram-button:hover {
+    background-color: #1f1f1f; /* Slightly darker on hover */
+    border-color: #007bb5; /* Darker blue on hover */
+  }
+  
+  
+  
 @media screen and (min-width: 1020px) {
     div.content {
         display: flex;
